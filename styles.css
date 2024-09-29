@@ -1,0 +1,271 @@
+/* Estilos principais */
+:root {
+    --primary-color: #003366;
+    --secondary-color: #f5f7fa;
+    --text-color: #333;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.clock {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f87;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.feedback-message {
+    margin-top: 1rem;
+    color: var(--success-color);
+}
+
+.feedback-message.error {
+    color: var(--error-color);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-link {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-link.active {
+    background-color: #005f87;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 2rem;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.history-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 40%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
+    animation: fadeIn 0.5s; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.progress {
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Estilos para modo escuro */
+body.dark-mode {
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+header.dark-mode {
+    background-color: #333; /* Cabeçalho escuro */
+}
+
+button.dark-mode {
+    background-color: #444; /* Botões em modo escuro */
+    color: #f1f1f1; /* Texto claro nos botões */
+}
+
+.input-field.dark-mode {
+    background-color: #555; /* Campo de entrada escuro */
+    color: #f1f1f1; /* Texto claro nos campos */
+    border: 1px solid #666; /* Borda mais clara */
+}
+
+.history-container.dark-mode {
+    background-color: #444; /* Fundo do histórico escuro */
+    border: 1px solid #666; /* Borda mais clara */
+}
+
+.stat-card.dark-mode {
+    background-color: #666; /* Cartão escuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+.tabs.dark-mode {
+    background-color: #444; /* Fundo das abas em modo escuro */
+}
+
+.tab-link.dark-mode {
+    background-color: #555; /* Botões das abas em modo escuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+.tab-link.active.dark-mode {
+    background-color: #0077b6; /* Cor ativa das abas em modo escuro */
+}
+/* Estilos para modo escuro */
+body.dark-mode {
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+header.dark-mode {
+    background-color: #333; /* Cabeçalho escuro */
+}
+
+button.dark-mode {
+    background-color: #444; /* Botões em modo escuro */
+    color: #f1f1f1; /* Texto claro nos botões */
+}
+
+.input-field.dark-mode {
+    background-color: #555; /* Campo de entrada escuro */
+    color: #f1f1f1; /* Texto claro nos campos */
+    border: 1px solid #666; /* Borda mais clara */
+}
+
+.history-container.dark-mode {
+    background-color: #444; /* Fundo do histórico escuro */
+    border: 1px solid #666; /* Borda mais clara */
+}
+
+.stat-card.dark-mode {
+    background-color: #666; /* Cartão escuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+.tabs.dark-mode {
+    background-color: #444; /* Fundo das abas em modo escuro */
+}
+
+.tab-link.dark-mode {
+    background-color: #555; /* Botões das abas em modo escuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+.tab-link.active.dark-mode {
+    background-color: #0077b6; /* Cor ativa das abas em modo escuro */
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanofi - Portal de Funcionários</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>Sanofi - Portal de Funcionários</h1>
+            <div id="clock" class="clock"></div>
+        </div>
+    </header>
+
+    <section id="portalSection" class="portal-section container">
+        <div class="tabs">
+            <button class="tab-link active" data-tab="pontoSection">Registrar Ponto</button>
+            <button class="tab-link" data-tab="treinamentoSection">Treinamentos</button>
+            <button class="tab-link" data-tab="dashboardSection">Dashboard</button>
+        </div>
+
+        <!-- Registrar Ponto Section -->
+        <div id="pontoSection" class="tab-content active">
+            <h2>Registrar Ponto</h2>
+            <p><strong>Último ponto registrado:</strong> <span id="lastPonto">Nenhum ponto registrado</span></p>
+            <button id="markPonto" class="main-button">Registrar Ponto Agora</button>
+            <small id="pontoFeedback" class="feedback-message"></small>
+            <h3>Histórico de Ponto</h3>
+            <div id="pontoHistory" class="history-container"></div>
+            <div class="button-group">
+                <button id="clearHistory" class="export-button">Limpar Histórico de Pontos</button>
+            </div>
+        </div>
+
+        <!-- Treinamentos Section -->
+        <div id="treinamentoSection" class="tab-content">
+            <h2>Treinamentos</h2>
+            <h3>Adicionar Novo Curso</h3>
+            <div class="add-course-container">
+                <input type="text" id="newCourseName" placeholder="Nome do novo curso" class="input-field" required>
+                <button id="addCourse" class="main-button">Adicionar Curso</button>
+                <div id="courseFeedback" class="feedback-message"></div>
+            </div>
+
+            <div class="training-progress">
+                <h3>Progresso nos Treinamentos</h3>
+                <div class="progress-bar">
+                    <div class="progress" id="trainingProgress" style="width: 0%;">0% Concluído</div>
+                </div>
+            </div>
+
+            <div class="training-list">
+                <h3>Cursos Disponíveis</h3>
+                <ul id="availableTrainings"></ul>
+                <h3>Cursos Concluídos</h3>
+                <ul id="completedTrainings"></ul>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="tab-content">
+            <h2>Resumo e Estatísticas</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total de Pontos Registrados</h3>
+                    <p id="totalPontos">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total de Treinamentos Concluídos</h3>
+                    <p id="totalTreinamentos">0</p>
+                </div>
+            </div>
+            <canvas id="progressChart" width="400" height="200"></canvas>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2>Relatório Detalhado</h2>
+            <div id="detailedReports"></div>
+            <button id="generateDetailedReport">Gerar Relatório</button>
+        </div>
+    </div>
+
+
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
