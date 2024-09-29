@@ -1,6 +1,5 @@
 # Sanofi - Portal de Funcionários
 
-![Sanofi Logo](URL_DA_IMAGEM)
 
 ## Descrição
 
